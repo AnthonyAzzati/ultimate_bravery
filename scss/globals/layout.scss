@@ -1,0 +1,27 @@
+@use "../utils" as *;
+
+.container {
+  padding: 0 rem(25);
+  max-width: rem(1140);
+  margin: 0 auto rem(46);
+
+  @include breakpoint(s) {
+    padding: 0 rem(18);
+  }
+
+  @include breakpoint(m) {
+    padding: 0 rem(24);
+  }
+
+  @include breakpoint(l) {
+    padding: 0 rem(16);
+  }
+
+  @include breakpoint(xl) {
+    padding: 0 rem(30);
+  }
+
+  @include breakpoint(xxl) {
+    padding: 0 rem(40);
+  }
+}

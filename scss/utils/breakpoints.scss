@@ -1,0 +1,52 @@
+/*
+* small(s) 576px
+* medium(m) 768px
+* large(l) 992px
+* x-large(xl) 1200px
+* xx-large(xxl) 1400px
+*/
+$breakpoints-up: (
+        "s": "36em",
+        "m": "48em",
+        "l": "62em",
+        "xl": "75em",
+        "xxl": "87.50em",
+);
+
+/*
+* small(s) <576px
+* medium(m) <768px
+* large(l) <992px
+* x-large(xl) <1200px
+* xx-large(xxl) <1400px
+*/
+$breakpoints-down: (
+        "s": "35.9375em",
+        "m": "47.9375em",
+        "l": "61.9375em",
+        "xl": "74.9375em",
+);
+
+/*
+* Permet d'appliquer un media-query en fonction d'un breakpoint
+* pour une taille MINIMALE d'écran
+* @param $size: string (s, m, l, xl, xxl)
+* @return applique le media-query au contenu désiré
+*/
+@mixin breakpoint($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
+/*
+* Permet d'appliquer un media-query en fonction d'un breakpoint
+* pour une taille MAXIMALE d'écran
+* @param $size: string (s, m, l, xl)
+* @return applique le media-query au contenu désiré
+*/
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}

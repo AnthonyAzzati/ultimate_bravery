@@ -1,0 +1,11 @@
+@use "sass:math";
+
+/*
+* Cette fonction permet de convertir des pixels en rem,
+* par exemple rem(32), soit 32px, donnera 2rem.
+* @param $pixels:number
+* @return {number}rem;
+*/
+@function rem($pixels, $context: 16) {
+  @return (math.div($pixels, $context)) * 1rem;
+}
