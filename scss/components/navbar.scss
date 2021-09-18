@@ -1,0 +1,36 @@
+@import "../utils/functions.scss";
+
+nav{
+  display: flex;
+  justify-content: space-between;
+
+  div {
+    display: flex;
+    align-items: center;
+  }
+
+  ul {
+    display: flex;
+    text-transform: uppercase;
+  }
+}
+
+.navbar {
+  &__logo {
+    width: 60px;
+  }
+
+  &__separator {
+    margin: 0 10px;
+    width: 1px;
+    height: 36px;
+    background-color: var(--white);
+  }
+
+  &__title {
+    margin: 0;
+    text-transform: uppercase;
+    font-family: var(--font-iceland);
+    font-size: rem(36);
+  }
+}
