@@ -90,6 +90,9 @@ nav {
   }
 }
 
+.container {
+  margin-bottom: 15px;
+}
 
 @media screen and (min-width: 1024px) {
   nav {
@@ -113,5 +116,9 @@ nav {
     &__button {
       font-size: rem(14);
     }
+  }
+
+  .container {
+    margin-bottom: 0;
   }
 }
