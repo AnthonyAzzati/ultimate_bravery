@@ -1,0 +1,86 @@
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+#maraudeurs {
+  border-top: 1px solid var(--white);
+  background-image: url("../../assets/texture_background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  min-height: calc(100vh - 114px);
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    min-height: calc(100vh - 114px);
+
+    h1 {
+      font-family: var(--font-iceland);
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 2.25rem;
+    }
+
+    .maraudeurs {
+      &__separator {
+      width: 375px;
+      }
+
+      &__logo {
+        width: 150px;
+      }
+
+      &__arrow-down {
+        animation: bounce 1s infinite;
+        margin: 2rem 0;
+      }
+    }
+
+    p {
+      text-align: center;
+      font-size: 1.125rem;
+    }
+  }
+}
+
+
+
+@media screen and (min-width: 1024px) {
+  #maraudeurs {
+    min-height: calc(100vh - 59px);
+
+
+    div {
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      .maraudeurs {
+        &__separator {
+          margin: 1rem 0;
+        }
+
+        &__logo {
+          width: 250px;
+        }
+      }
+
+      p {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
